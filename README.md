@@ -1,4 +1,4 @@
-# THOR VIM syntax file
+# VIM syntax file for THOR
 
 A [VIM](https://www.vim.org/) syntax file for log files of [APT Scanner THOR](https://www.nextron-systems.com/thor/).
 
@@ -16,7 +16,7 @@ syntax on
 au BufRead *.thor set filetype=thor
 ```
 
-Note that vim does not apply syntax highlighting to `*.txt` files.
+Note that VIM does not apply syntax highlighting to `*.txt` files.
 For dynamically applying the syntax highlighting via shortcut (in the example below `F2`) add the following to your `vimrc`:
 
 ```

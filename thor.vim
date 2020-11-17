@@ -1,6 +1,7 @@
 " VIM syntax file
 " Language: THOR log files
 " Author: Mathias Stuhlmacher
+" Reference: https://github.com/stuhli/vim-thor
 
 " check for existing syntax files
 if exists("b:current_syntax")

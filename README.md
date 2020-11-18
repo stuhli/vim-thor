@@ -2,6 +2,8 @@
 
 A [VIM](https://www.vim.org/) syntax file for log files of [APT Scanner THOR](https://www.nextron-systems.com/thor/).
 
+![Example](docs/example.png)
+
 ## Installation
 
 Place the file in `$HOME/.vim/syntax/thor.vim`.

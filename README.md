@@ -1,6 +1,6 @@
-# VIM syntax file for THOR
+# VIM syntax file for THOR and Loki
 
-A [VIM](https://www.vim.org/) syntax file for log files of [APT Scanner THOR](https://www.nextron-systems.com/thor/).
+A [VIM](https://www.vim.org/) syntax file for log files of [APT Scanner THOR](https://www.nextron-systems.com/thor/) and [Loki](https://github.com/Neo23x0/Loki)
 
 ![Example 1](docs/example_1.png)
 

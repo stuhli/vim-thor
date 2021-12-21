@@ -1,6 +1,9 @@
 # example thor report
 example_report.thor
 
+# virtual environment needed for linting
+venv/
+
 # Created by https://www.toptal.com/developers/gitignore/api/vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim
 

@@ -53,3 +53,17 @@ If you still want to save the changed file, you can do this with `:w!` anyway.
 
 In case of very long lines the highlighting fails because of VIMs default setting.
 Change by adding `set synmaxcol=10000` to your `vimrc` or typing `:set synmaxcol=10000` in normal mode.
+
+### Performance issues
+
+If you experience performance issues when using it, try adding the following to your `vimrc`:
+
+```
+set regexengine=1
+```
+
+Depending on your version of VIM this may help:
+
+```
+set regexengine=0
+```

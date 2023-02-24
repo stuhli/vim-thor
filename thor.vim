@@ -18,7 +18,10 @@ syn match ThorHash '\s[a-f0-9]\{64}'
 " - zero-width lookup matches to avoid conflicts with the matches of FILE: and
 "   EXT: because normally only one match per string is allowed.
 " - \n\? to work after F7 split lines
-syn match ThorFilename '\(FILE:\)\@<= .\{1,1000} \n\?\(EXT:\)\@='
+" - [A-Z]\{3,10}... is the following EXT:, REASON:, ... 
+syn match ThorFilename '\(FILE:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
+
+syn match ThorHighScore '\(SCORE:\)\@<= \(2\|3\|4\|5\|6\|7\|8\|9\)\d\d \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
 
 " modules
 syn match ThorModule 'MODULE: .* \zeMESSAGE'
@@ -608,5 +611,6 @@ highlight ThorMessage ctermfg=yellow
 highlight ThorModule ctermfg=brown
 highlight ThorScanid ctermfg=blue
 highlight ThorFilename ctermfg=yellow
+highlight ThorHighScore ctermfg=red
 
 let b:current_syntax = "thor"

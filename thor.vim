@@ -14,6 +14,12 @@ syn match ThorIp /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)
 " highlight SHA256 hashes for easier copypaste
 syn match ThorHash '\s[a-f0-9]\{64}'
 
+" highlight filenames
+" - zero-width lookup matches to avoid conflicts with the matches of FILE: and
+"   EXT: because normally only one match per string is allowed.
+" - \n\? to work after F7 split lines
+syn match ThorFilename '\(FILE:\)\@<= .\{1,1000} \n\?\(EXT:\)\@='
+
 " modules
 syn match ThorModule 'MODULE: .* \zeMESSAGE'
 
@@ -601,5 +607,6 @@ highlight ThorIp ctermfg=green
 highlight ThorMessage ctermfg=yellow
 highlight ThorModule ctermfg=brown
 highlight ThorScanid ctermfg=blue
+highlight ThorFilename ctermfg=yellow
 
 let b:current_syntax = "thor"

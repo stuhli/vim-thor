@@ -21,9 +21,7 @@ syn match ThorHash '\s[a-f0-9]\{64}'
 " - [A-Z]\{3,10}... is the following EXT:, REASON:, ...
 
 " highlight filenames
-syn match ThorFilename '\(FILE:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
-syn match ThorFilename '\(FILE_\d\{1,2}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
-syn match ThorFilename '\(FILE_\d\{1,2}_\d\{1,2}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
+syn match ThorFilename '\(FILE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?\d\{0,3}_\?\d\{0,3}: \)\@='
 " highlight scores from 200 to 999
 syn match ThorHighScore '\(SCORE:\)\@<= \(2\|3\|4\|5\|6\|7\|8\|9\)\d\d \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
 

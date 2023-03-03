@@ -10,7 +10,7 @@ Place the file `thor.vim` in `$HOME/.vim/syntax/thor.vim`.
 
 ## Usage
 
-For automatic syntax highlighting depending on the default log file names or the extension *.thor, place the following in your `vimrc`:
+For automatic syntax highlighting depending on the default log file names or the extension `*.thor`, place the following in your `vimrc`:
 ```vim
 filetype plugin on
 syntax on

@@ -6,7 +6,15 @@ A [VIM](https://www.vim.org/) syntax file for log files of [APT Scanner THOR](ht
 
 ## Installation
 
-Place the file `thor.vim` in `$HOME/.vim/syntax/thor.vim`.
+Place the file `syntax/thor.vim` in `$HOME/.vim/syntax/thor.vim`.
+
+Or use vim-plug to install:
+
+```vim
+call plug#begin()
+  Plug 'stuhli/vim-thor'
+call plug#end()
+```
 
 ## Usage
 

@@ -1,1 +1,1 @@
-autocmd! BufNewFile,BufRead *.thor set filetype=yara
+autocmd! BufNewFile,BufRead *.thor set filetype=thor

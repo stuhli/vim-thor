@@ -21,7 +21,8 @@ syn match ThorHash '\s[a-f0-9]\{64}'
 " - [A-Z]\{3,10}... is the following EXT:, REASON:, ...
 
 " highlight filenames
-syn match ThorFilename '\(FILE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\=[A-Z]\{0,10}_\=\d\{0,3}_\?\=\{0,3}: \)\@='
+syn match ThorFilename '\(FILE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?[A-Z]\{0,10}_\?\d\{0,3}_\?\d\{0,3}: \)\@='
+syn match ThorFilename '\(ARCHIVE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?[A-Z]\{0,10}_\?\d\{0,3}_\?\d\{0,3}: \)\@='
 " highlight scores from 200 to 999
 syn match ThorHighScore '\(SCORE:\)\@<= \(2\|3\|4\|5\|6\|7\|8\|9\)\d\d \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
 
@@ -312,6 +313,7 @@ syn match ThorBodyField 'SHA256_\?\d\{0,3}_\?\d\{0,3}:'
 syn match ThorBodyField 'SHARE_NAME:'
 syn match ThorBodyField 'SHARE_PERMS:'
 syn match ThorBodyField 'SHELL:'
+syn match ThorBodyField 'SIGCLASS_\?\d\{0,3}_\?\d\{0,3}:'
 syn match ThorBodyField 'SIGNAL:'
 syn match ThorBodyField 'SIGNATURE:'
 syn match ThorBodyField 'SIGTYPE_\?\d\{0,3}_\?\d\{0,3}:'

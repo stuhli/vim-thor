@@ -82,6 +82,7 @@ syn match ThorImportant 'MESSAGE: Successfully closed ThorDB'
 syn match ThorImportant 'MESSAGE: Successfully opened ThorDB'
 
 " important matches - regarding administration / qa / errors
+syn match ThorImportant 'MESSAGE: 32 bit THOR was executed on 64 bit system. For improved results, use the 64 bit version of THOR.'
 syn match ThorImportant 'MESSAGE: Activating soft mode due to .* \zeSCANID'
 syn match ThorImportant 'MESSAGE: Added virtual mapping'
 syn match ThorImportant 'MESSAGE: Argument List: \[.*\]'

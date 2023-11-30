@@ -15,7 +15,7 @@ syn match ThorIp /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)
 syn match ThorHash '\s[a-f0-9]\{64}'
 
 " advanced RegExes
-" - zero-width lookup matches to avoid conflicts with the matches of FILE: and
+" - @<= is zero-width lookup matches to avoid conflicts with the matches of FILE: and
 "   SCORE: because normally only one match per string is allowed.
 " - \n\? to work after F7 split lines
 " - [A-Z]\{3,10}... is the following EXT:, REASON:, ...
@@ -23,8 +23,8 @@ syn match ThorHash '\s[a-f0-9]\{64}'
 " highlight filenames
 syn match ThorFilename '\(FILE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?[A-Z]\{0,10}_\?\d\{0,3}_\?\d\{0,3}: \)\@='
 syn match ThorFilename '\(ARCHIVE_\?\d\{0,3}_\?\d\{0,3}:\)\@<= .\{-1,1000} \n\?\([A-Z]\{3,10}_\?[A-Z]\{0,10}_\?\d\{0,3}_\?\d\{0,3}: \)\@='
-" highlight scores from 200 to 999
-syn match ThorHighScore '\(SCORE:\)\@<= \(2\|3\|4\|5\|6\|7\|8\|9\)\d\d \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
+" highlight scores from 80 to 100 (according to https://github.com/Neo23x0/YARA-Style-Guide#score)
+syn match ThorHighScore '\(SCORE:\)\@<= \(\(8\|9\)\d\|100\) \n\?\([A-Z]\{3,10}_\?\d\{0,3}: \)\@='
 
 " modules
 syn match ThorModule 'MODULE: .* \zeMESSAGE'
